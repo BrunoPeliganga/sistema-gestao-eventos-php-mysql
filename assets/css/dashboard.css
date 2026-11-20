@@ -1,0 +1,390 @@
+/* ==========================================
+   PAINEL ADMINISTRATIVO (DASHBOARD CSS)
+   Totalmente Responsivo & Moderno
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   SIDEBAR (DESKTOP)
+========================================== */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1e2227;
+    color: #ffffff;
+    padding: 20px 15px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.sidebar h4 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sidebar .nav-link {
+    color: #b0b7c3;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: #2c323b;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   ÁREA DE CONTEÚDO PRINCIPAL
+========================================== */
+.content {
+    margin-left: 240px;
+    padding: 25px 30px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* ==========================================
+   CARDS DE ESTATÍSTICA (TOPO)
+========================================== */
+.card-custom {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-custom:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-custom h5 {
+    font-size: 0.95rem;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.card-custom h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 4px;
+}
+
+.card-custom small {
+    color: #8892a0;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   TABELAS RESPONSIVAS (PRODUTOS / USERS)
+========================================== */
+.table-responsive {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    background: #ffffff;
+    vertical-align: middle;
+}
+
+.table thead th {
+    background: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 14px;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 12px 14px;
+    color: #333;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Ações nas tabelas */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+/* Badges e Tags */
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag-admin {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.tag-user {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+
+/* =======================================================
+   SUBSTITUIR AS LINHAS 179 ATÉ 263 POR ESTE CÓDIGO:
+   ======================================================= */
+
+/* ==========================================
+   ENCOMENDAS (ORDERS) — DESIGN MODERNO
+========================================== */
+.order-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    margin-bottom: 22px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabeçalho da Encomenda */
+.order-header {
+    background: #fbfcfd;
+    padding: 16px 22px;
+    border-bottom: 1px solid #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.order-client {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: inline-flex;
+    align-items: center;
+}
+
+.order-client i {
+    color: #3b82f6 !important;
+    font-size: 1.25rem;
+}
+
+.order-meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 3px;
+}
+
+.order-meta strong {
+    background: #e2e8f0;
+    color: #1e293b;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+/* Corpo e Tabela da Encomenda */
+.order-body {
+    padding: 18px 22px;
+    background: #ffffff;
+}
+
+.order-body table {
+    background: transparent !important;
+}
+
+.order-body thead th {
+    background: transparent !important;
+    color: #94a3b8 !important;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1.5px solid #f1f5f9;
+    padding: 8px 12px;
+}
+
+.order-body tbody td {
+    padding: 12px;
+    font-size: 0.92rem;
+    color: #334155;
+    border-bottom: 1px solid #f8fafc;
+}
+
+/* Badge estilizada de Quantidade */
+.order-body .badge {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Linha do Total */
+.order-body tr:last-child td {
+    border-top: 2px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.order-body .fs-6 {
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+}
+
+/* ==========================================
+   BOTÕES E STATUS (PENDENTE / CONCLUÍDO)
+========================================== */
+
+/* Status Concluído (Verde Esmeralda) */
+.status-completed {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.12);
+}
+
+/* Botão Pendente (Âmbar / Dourado Interativo) */
+.status-pending {
+    background-color: #fffbeb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);
+    transition: all 0.25s ease;
+}
+
+.status-pending:hover {
+    background-color: #f59e0b;
+    color: #ffffff !important;
+    border-color: #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   NAVBAR MOBILE
+========================================== */
+.mobile-navbar {
+    display: none;
+    background: #1e2227 !important;
+    padding: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   AJUSTES RESPONSIVOS (TABLETS E SMARTPHONES)
+========================================== */
+@media (max-width: 991px) {
+    .content {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px 12px;
+    }
+
+    .mobile-navbar {
+        display: block;
+    }
+
+    .card-custom {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    .card-custom h2 {
+        font-size: 1.8rem;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}

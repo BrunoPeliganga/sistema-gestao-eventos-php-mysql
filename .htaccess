@@ -1,0 +1,13 @@
+# Ficheiro carregado por omissão ao entrar numa pasta.
+# O Apache tenta por esta ordem e usa o primeiro que existir.
+DirectoryIndex index.php admin/index.php profile/index.php cart.php
+
+# Não listar o conteúdo da pasta quando nenhum dos ficheiros acima existir
+Options -Indexes
+
+# Compatibilidade: Mapear automaticamente pedidos .html para .php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)\.html$ $1.php [L,QSA]
+</IfModule>
